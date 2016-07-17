@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     //1- Check if the device has a camera, normally this is treated with the persmission
     //2- Create main layout
     //3-  Learn how to select the type of camera
+    //4- Syncronize it with firebase
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
