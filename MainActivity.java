@@ -8,8 +8,12 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-  ImageView image;
+    ImageView image;
     ImageButton takePhoto;
+    Camera the_camera;
+
+    //1- Check if the device has a camera, normally this is treated with the persmission
+    //2- Create main layout
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,11 +21,11 @@ public class MainActivity extends AppCompatActivity {
 
         image = (ImageView) findViewById(R.id.photo);
         takePhoto = (ImageButton) findViewById(R.id.takePhoto);
-
+        the_camera = new Camera();
         takePhoto.setOnClickListener(new View.OnClickListener(){
             @Override
             public  void onClick(View v){
-
+                if(the_camera.checkCameraHardware());
             }
         });
     }
